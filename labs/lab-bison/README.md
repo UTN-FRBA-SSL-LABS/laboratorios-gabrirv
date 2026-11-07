@@ -250,7 +250,7 @@ P3=SI
 - [ ] Todos los `TODO` completados en los archivos `.y`
 - [x] Preguntas P1, P2 y P3 respondidas en este `README.md`
 - [ ] `make test` pasa localmente
-- [ ] Todo pusheado a `main`
+- [x] Todo pusheado a `main`
 
 ### Verificación local
 

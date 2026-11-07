@@ -14,7 +14,7 @@ void yyerror(const char *msg) { fprintf(stderr, "Error: %s\n", msg); }
  */
 %union {
     int  int_val;
-    char str_val[64]
+    char str_val[64];
     /* TODO 1 — Agregar un miembro para cadenas: char str_val[64]; */
 }
 
@@ -26,7 +26,9 @@ void yyerror(const char *msg) { fprintf(stderr, "Error: %s\n", msg); }
 /* TODO 3 — Declarar el tipo de la producción 'item': %type <int_val> item */
 /*          (cambiar int_val por el miembro adecuado una vez que agregues str_val) */
 
+
 %type <str_val> item
+
 
 %%
 
@@ -37,7 +39,7 @@ input:
 
 item:
     NUM '\n'   { printf("Numero: %d\n", $1); }   /* Ejemplo: ya implementado */
-    IDENT '\n' {printf("a \n");}
+    IDENT '\n' {printf("Identificador: %s\n", $1);}
   /* TODO 4 — Agregar regla para IDENT '\n' que imprima: "Identificador: <nombre>\n" */
   ;
     
